@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Kotlin Firebase Messenger.iml" filepath="$PROJECT_DIR$/Kotlin Firebase Messenger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/Kotlin Firebase Messenger-app.iml" filepath="$PROJECT_DIR$/app/Kotlin Firebase Messenger-app.iml" group="Kotlin Firebase Messenger/app" />
+      <module fileurl="file://$PROJECT_DIR$/KotlinMessenger-Kotlin Firebase Messenger.iml" filepath="$PROJECT_DIR$/KotlinMessenger-Kotlin Firebase Messenger.iml" group="Kotlin Firebase Messenger" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
