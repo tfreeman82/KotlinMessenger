@@ -1,5 +1,6 @@
 package com.example.tristanfreeman.kotlinfirebasemessenger
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
@@ -29,7 +30,9 @@ class LoginActivity: AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener {
                     if (!it.isSuccessful) return@addOnCompleteListener
-
+                    val intent = Intent(this, LatestMessagesActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)//flag clears stack
+                    startActivity(intent)
                     Log.d("Login", "Successfully logged in user with uid: ${it.result?.user?.uid}")
 
                 }.addOnFailureListener {

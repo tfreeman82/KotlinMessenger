@@ -112,6 +112,10 @@ class RegisterActivity : AppCompatActivity() {
                 .addOnCompleteListener {
                     if (it.isSuccessful){
                         Log.d("RegisterActivity", "Saved user to db")
+
+                        val intent = Intent(this, LatestMessagesActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)//flag clears stack
+                        startActivity(intent)
                     }else{
                         Log.d("RegisterActivity 🎟", it.exception.toString())
                     }
